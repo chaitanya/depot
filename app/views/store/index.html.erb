@@ -1,0 +1,15 @@
+<h1>Your Pragmatic Catalog</h1>
+<%unless session[:counter] < 5 %>
+<h1>You Have visited the store <%=  pluralize(session[:counter],'time')  %> </h1>
+<% end %>
+<% for product in @products -%>
+<div class="entry">
+<%= link_to image_tag(product.image_url) ,{:action=>"add_to_cart",:id=>product} ,:method=>:post %>
+<h3><%=h product.title %></h3>
+<%= product.description %>
+<span class="price"><%= number_to_currency(product.price) %></span>
+<% form_remote_tag :url => { :action => :add_to_cart, :id => product } do %>
+<%= submit_tag "Add to Cart" %>
+<% end %>
+</div>
+<% end %>
