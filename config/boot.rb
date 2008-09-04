@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Agile Web Development with Rails, 3rd Ed.",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
+#---
 # Don't change this file!
 # Configure your app in config/environment.rb and config/environments/*.rb
 
@@ -24,9 +32,8 @@ module Rails
       File.exist?("#{RAILS_ROOT}/vendor/rails")
     end
 
-    # FIXME : Ruby 1.9
     def preinitialize
-      load(preinitializer_path) if File.exists?(preinitializer_path)
+      load(preinitializer_path) if File.exist?(preinitializer_path)
     end
 
     def preinitializer_path
@@ -44,6 +51,7 @@ module Rails
   class VendorBoot < Boot
     def load_initializer
       require "#{RAILS_ROOT}/vendor/rails/railties/lib/initializer"
+      Rails::Initializer.run(:install_gem_spec_stubs)
     end
   end
 

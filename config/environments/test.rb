@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Agile Web Development with Rails, 3rd Ed.",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
+#---
 # Settings specified here will take precedence over those in config/environment.rb
 
 # The test environment is used exclusively to run your application's
@@ -16,7 +24,7 @@ config.action_controller.perform_caching             = false
 # Disable request forgery protection in test environment
 config.action_controller.allow_forgery_protection    = false
 
-# Tell ActionMailer not to deliver emails to the real world.
+# Tell Action Mailer not to deliver emails to the real world.
 # The :test delivery method accumulates sent emails in the
 # ActionMailer::Base.deliveries array.
 config.action_mailer.delivery_method = :test

@@ -1,5 +1,13 @@
+#---
+# Excerpted from "Agile Web Development with Rails, 3rd Ed.",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
+#---
 # This file is auto-generated from the current state of the database. Instead of editing this file, 
-# please use the migrations feature of ActiveRecord to incrementally modify your database, and
+# please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
 # Note that this schema.rb definition is the authoritative source for your database schema. If you need
@@ -9,17 +17,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 6) do
-
-  create_table "cart_items", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "carts", :force => true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+ActiveRecord::Schema.define(:version => 20080601000004) do
 
   create_table "products", :force => true do |t|
     t.string   "title"

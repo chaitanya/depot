@@ -1,6 +1,13 @@
+#---
+# Excerpted from "Agile Web Development with Rails, 3rd Ed.",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
+#---
 ActionController::Routing::Routes.draw do |map|
   map.resources :products
-  map.resources :store
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -20,6 +27,12 @@ ActionController::Routing::Routes.draw do |map|
 
   # Sample resource route with sub-resources:
   #   map.resources :products, :has_many => [ :comments, :sales ], :has_one => :seller
+  
+  # Sample resource route with more complex sub-resources
+  #   map.resources :products do |products|
+  #     products.resources :comments
+  #     products.resources :sales, :collection => { :recent => :get }
+  #   end
 
   # Sample resource route within a namespace:
   #   map.namespace :admin do |admin|

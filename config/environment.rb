@@ -1,3 +1,11 @@
+#---
+# Excerpted from "Agile Web Development with Rails, 3rd Ed.",
+# published by The Pragmatic Bookshelf.
+# Copyrights apply to this code. It may not be used to create training material, 
+# courses, books, articles, and the like. Contact us if you are in doubt.
+# We make no guarantees that this code is fit for any purpose. 
+# Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
+#---
 # Be sure to restart your server when you modify this file
 
 # Uncomment below to force Rails into production mode when
@@ -5,7 +13,7 @@
 # ENV['RAILS_ENV'] ||= 'production'
 
 # Specifies gem version of Rails to use when vendor/rails is not present
-RAILS_GEM_VERSION = '2.0.2' unless defined? RAILS_GEM_VERSION
+RAILS_GEM_VERSION = '2.1.0' unless defined? RAILS_GEM_VERSION
 
 # Bootstrap the Rails environment, frameworks, and default configuration
 require File.join(File.dirname(__FILE__), 'boot')
@@ -16,9 +24,15 @@ Rails::Initializer.run do |config|
   # -- all .rb files in that directory are automatically loaded.
   # See Rails::Configuration for more options.
 
-  # Skip frameworks you're not going to use (only works if using vendor/rails).
-  # To use Rails without a database, you must remove the Active Record framework
+  # Skip frameworks you're not going to use. To use Rails without a database
+  # you must remove the Active Record framework.
   # config.frameworks -= [ :active_record, :active_resource, :action_mailer ]
+
+  # Specify gems that this application depends on. 
+  # They can then be installed with "rake gems:install" on new installations.
+  # config.gem "bj"
+  # config.gem "hpricot", :version => '0.6', :source => "http://code.whytheluckystiff.net"
+  # config.gem "aws-s3", :lib => "aws/s3"
 
   # Only load the plugins named here, in the order given. By default, all plugins 
   # in vendor/plugins are loaded in alphabetical order.
@@ -32,20 +46,24 @@ Rails::Initializer.run do |config|
   # (by default production uses :info, the others :debug)
   # config.log_level = :debug
 
+  # Make Time.zone default to the specified zone, and make Active Record store time values
+  # in the database in UTC, and return them converted to the specified local zone.
+  # Run "rake -D time" for a list of tasks for finding time zone names. Uncomment to use default local time.
+  config.time_zone = 'UTC'
+
   # Your secret key for verifying cookie session data integrity.
   # If you change this key, all old sessions will become invalid!
   # Make sure the secret is at least 30 characters and all random, 
   # no regular words or you'll be exposed to dictionary attacks.
   config.action_controller.session = {
     :session_key => '_depot_session',
-    :secret      => 'af5e2b0c7825fe27822a205ecbbe8ec43b1c587b0bc838a0c85915be87fd382ef0ca8604cc56362f173ec69e3bfbab03381c871bd79a0f6cc07b7f7fbbbf62d0'
-      
+    :secret      => '84fd6f30df2a1ae1a69b4efc93c09f53acc3397633684d8f2e7dfca70da5f237cbb264827031170ec3fc5cf70f21c5835463715909b1cad80d661b6e7c5b0645'
   }
 
   # Use the database for sessions instead of the cookie-based default,
   # which shouldn't be used to store highly confidential information
-  # (create the session table with 'rake db:sessions:create')
-   config.action_controller.session_store = :active_record_store
+  # (create the session table with "rake db:sessions:create")
+  config.action_controller.session_store = :active_record_store
 
   # Use SQL instead of Active Record's schema dumper when creating the test database.
   # This is necessary if your schema can't be completely dumped by the schema dumper,
@@ -54,7 +72,4 @@ Rails::Initializer.run do |config|
 
   # Activate observers that should always be running
   # config.active_record.observers = :cacher, :garbage_collector
-
-  # Make Active Record use UTC-base instead of local time
-  # config.active_record.default_timezone = :utc
 end

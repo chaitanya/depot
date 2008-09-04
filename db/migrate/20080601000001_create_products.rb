@@ -6,6 +6,18 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
 #---
-# Methods added to this helper will be available to all templates in the application.
-module ApplicationHelper
+class CreateProducts < ActiveRecord::Migration
+  def self.up
+    create_table :products do |t|
+      t.string :title
+      t.text :description
+      t.string :image_url
+
+      t.timestamps
+    end
+  end
+
+  def self.down
+    drop_table :products
+  end
 end

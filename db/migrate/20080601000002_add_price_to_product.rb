@@ -6,6 +6,13 @@
 # We make no guarantees that this code is fit for any purpose. 
 # Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
 #---
-# Methods added to this helper will be available to all templates in the application.
-module ApplicationHelper
+class AddPriceToProduct < ActiveRecord::Migration
+  def self.up
+    add_column :products, :price, :decimal,
+      :precision => 8, :scale => 2, :default => 0
+  end
+
+  def self.down
+    remove_column :products, :price
+  end
 end

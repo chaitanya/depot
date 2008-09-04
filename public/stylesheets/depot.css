@@ -1,5 +1,16 @@
 /* Global styles */
 
+/* START:notice */
+#notice {
+  border: 2px solid red;
+  padding: 1em;
+  margin-bottom: 2em;
+  background-color: #f0f0f0;
+  font: bold smaller sans-serif;
+}
+/* END:notice */
+
+
 /* Styles for products/index */
 
 #product-list table {
@@ -136,6 +147,13 @@ h1 {
   margin-right: 2em;
 }
 
+
+  /* START:inline */
+  #store .entry form, #store .entry form div {
+    display: inline;
+  }
+  /* END:inline */
+
 /* START:cart */
 /* Styles for the cart in the main page and the sidebar */
 
@@ -228,16 +246,4 @@ h1 {
 #errorExplanation ul li {
   font-size: 12px;
   list-style: square;
-}
-
-#store .entry form, #store .entry form div {
-display: inline;
-}
-
-#notice {
-border: 2px solid red;
-padding: 1em;
-margin-bottom: 2em;
-background-color: #f0f0f0 ;
-font: bold smaller sans-serif;
 }
