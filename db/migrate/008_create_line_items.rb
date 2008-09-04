@@ -1,7 +1,4 @@
-class CreateLineItems < ActiveRecord::Migration
- 
-  
-  
+class CreateLineItems < ActiveRecord::Migration  
   def self.up
     create_table :line_items do |t|
       t.integer :product_id,:null=>false,:options => "CONSTRAINT fk_line_item_products REFERENCES products(id)"

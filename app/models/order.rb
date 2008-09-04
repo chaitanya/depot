@@ -18,7 +18,4 @@ li = LineItem.from_cart_item(item)
 line_items << li
 end
 end
-
-
-
 end

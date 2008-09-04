@@ -17780,3 +17780,562 @@ Rendered store/_cart_item (0.00000)
 Rendered store/_cart_item (0.00000)
 Rendered store/_cart (0.00000)
 Completed in 0.01500 (66 reqs/sec) | Rendering: 0.01500 (100%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/2]
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.015000)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.156000)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (0.125000)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM "schema_info"[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM "schema_migrations"[0m
+  [4;35;1mSQL (0.110000)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('8')[0m
+  [4;36;1mSQL (0.109000)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('1')[0m
+  [4;35;1mSQL (0.110000)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('2')[0m
+  [4;36;1mSQL (0.109000)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('3')[0m
+  [4;35;1mSQL (0.109000)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('4')[0m
+  [4;36;1mSQL (0.110000)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('5')[0m
+  [4;35;1mSQL (0.125000)[0m   [0mINSERT INTO "schema_migrations" (version) VALUES ('6')[0m
+  [4;36;1mSQL (0.110000)[0m   [0;1mINSERT INTO "schema_migrations" (version) VALUES ('7')[0m
+  [4;35;1mSQL (0.078000)[0m   [0mDROP TABLE "schema_info"[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.016000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateProducts (1)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to AddPriceToProduct (2)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to AddTestData (3)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSessions (4)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateCarts (5)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateCartItems (6)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Migrating to CreateOrders (7)
+  [4;35;1mSQL (0.000000)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateLineItems (8)
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.000000)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list("cart_items")[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list("carts")[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list("line_items")[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list("orders")[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_list("products")[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_list("sessions")[0m
+  [4;36;1mSQL (0.000000)[0m   [0;1mPRAGMA index_info('index_sessions_on_updated_at')[0m
+  [4;35;1mSQL (0.000000)[0m   [0mPRAGMA index_info('index_sessions_on_session_id')[0m
+
+
+Processing InfoController#properties (for 127.0.0.1 at 2008-09-03 20:12:11) [GET]
+  Session ID: ef2f728822ff9d26f43e682739d08bb0
+  Parameters: {"action"=>"properties", "controller"=>"rails/info"}
+  [4;36;1mSQL (0.000000)[0m   [0;1mSELECT version FROM schema_migrations[0m
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:14:01) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;35;1mProduct Load (0.000000)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.01500 (66 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2008-09-03 20:14:03) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"empty_cart", "controller"=>"store"}
+Redirected to http://localhost:3000/store
+Completed in 0.00010 (10000 reqs/sec) | DB: 0.01600 (16000%) | 302 Found [http://localhost/store/empty_cart]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:14:04) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.000000)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.00000)
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.04700 (37%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2008-09-03 20:14:08) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"add_to_cart", "id"=>"1", "controller"=>"store"}
+  [4;35;1mProduct Load (0.000000)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/1]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:16:03) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.000000)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2008-09-03 20:16:06) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"checkout", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+
+
+ActionView::TemplateError (uninitialized constant Order::PAYMENT_TYPES) on line #22 of store/checkout.html.erb:
+19: <%= label :order, :pay_type, "Pay with:" %>
+20: <%=
+21: form.select :pay_type,
+22: Order::PAYMENT_TYPES,
+23: :prompt => "Select a payment method"
+24: %>
+25: </p>
+
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:492:in `const_missing'
+    app/views/store/checkout.html.erb:22:in `_run_erb_47app47views47store47checkout46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/form_helper.rb:317:in `fields_for'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/helpers/form_helper.rb:253:in `form_for'
+    app/views/store/checkout.html.erb:3:in `_run_erb_47app47views47store47checkout46html46erb'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:338:in `execute'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template_handlers/compilable.rb:29:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:35:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/template.rb:22:in `render_template'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_view/base.rb:245:in `render_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1108:in `render_for_file'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:841:in `render_with_no_layout'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/layout.rb:251:in `render_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/core_ext/benchmark.rb:8:in `realtime'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:51:in `render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1157:in `default_render'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1168:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2008-09-03 20:18:07) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"checkout", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/checkout]
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2008-09-03 20:19:56) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"empty_cart", "controller"=>"store"}
+Redirected to http://localhost:3000/store
+Completed in 0.00010 (10000 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/store/empty_cart]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:19:56) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;35;1mProduct Load (0.016000)[0m   [0mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.00000)
+Completed in 0.12500 (8 reqs/sec) | Rendering: 0.03100 (24%) | DB: 0.03100 (24%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2008-09-03 20:23:59) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"add_to_cart", "id"=>"1", "controller"=>"store"}
+  [4;36;1mProduct Load (0.000000)[0m   [0;1mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.03200)
+Completed in 0.04700 (21 reqs/sec) | Rendering: 0.03200 (68%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/1]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2008-09-03 20:24:03) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"add_to_cart", "id"=>"3", "controller"=>"store"}
+  [4;35;1mProduct Load (0.000000)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 3) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/3]
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2008-09-03 20:24:11) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"checkout", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01600 (51%) | DB: 0.01600 (51%) | 200 OK [http://localhost/store/checkout]
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2008-09-03 20:25:03) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Place Order", "order"=>{"name"=>"chaitanya", "pay_type"=>"check", "address"=>"39119 sundale drive ", "email"=>"chaitanya.vellanki@gmail.com"}, "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"save_order", "controller"=>"store"}
+
+
+NoMethodError (undefined method `add_line_items_from_cart' for #<Order:0x46a2044>):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/attribute_methods.rb:256:in `method_missing'
+    /app/controllers/store_controller.rb:56:in `save_order'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2008-09-03 20:25:54) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Place Order", "order"=>{"name"=>"chaitanya", "pay_type"=>"check", "address"=>"39119 sundale drive ", "email"=>"chaitanya.vellanki@gmail.com"}, "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"save_order", "controller"=>"store"}
+  [4;36;1mSQL (0.000000)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+
+NoMethodError (undefined method `from_cart_item' for #<Class:0x486415c>):
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/base.rb:1667:in `method_missing'
+    /app/models/order.rb:17:in `add_line_items_from_cart'
+    /app/models/order.rb:16:in `each'
+    /app/models/order.rb:16:in `add_line_items_from_cart'
+    /app/controllers/store_controller.rb:56:in `save_order'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:1162:in `perform_action_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:580:in `call_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:573:in `perform_action_without_benchmark'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/rescue.rb:201:in `perform_action_without_caching'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:13:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/activerecord-2.1.0/lib/active_record/query_cache.rb:8:in `cache'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/caching/sql_cache.rb:12:in `perform_action'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `send'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:529:in `process_without_filters'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/filters.rb:569:in `process_without_session_management_support'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/session_management.rb:130:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/base.rb:389:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:149:in `handle_request'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:107:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:104:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:120:in `dispatch_cgi'
+    c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/dispatcher.rb:35:in `dispatch'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/../lib/mongrel/rails.rb:76:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/../lib/mongrel/rails.rb:74:in `process'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:159:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:158:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:158:in `process_client'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:285:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `initialize'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `new'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel.rb:268:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:282:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:281:in `each'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/configurator.rb:281:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/mongrel_rails:128:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/lib/mongrel/command.rb:212:in `run'
+    c:/ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.2-mswin32/bin/mongrel_rails:281
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:502:in `load'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/servers/mongrel.rb:64
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:354:in `new_constants_in'
+    c:/ruby/lib/ruby/gems/1.8/gems/activesupport-2.1.0/lib/active_support/dependencies.rb:509:in `require'
+    c:/ruby/lib/ruby/gems/1.8/gems/rails-2.1.0/lib/commands/server.rb:39
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    c:/ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering c:/ruby/lib/ruby/gems/1.8/gems/actionpack-2.1.0/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2008-09-03 20:29:58) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Place Order", "order"=>{"name"=>"chaitanya", "pay_type"=>"check", "address"=>"39119 sundale drive ", "email"=>"chaitanya.vellanki@gmail.com"}, "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"save_order", "controller"=>"store"}
+  [4;35;1mOrder Create (0.000000)[0m   [0mINSERT INTO "orders" ("name", "updated_at", "pay_type", "address", "email", "created_at") VALUES('chaitanya', '2008-09-04 03:29:58', 'check', '39119 sundale drive ', 'chaitanya.vellanki@gmail.com', '2008-09-04 03:29:58')[0m
+  [4;36;1mLineItem Create (0.000000)[0m   [0;1mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(1, '2008-09-04 03:29:58', 29.95, 1, 1, '2008-09-04 03:29:58')[0m
+  [4;35;1mLineItem Create (0.000000)[0m   [0mINSERT INTO "line_items" ("order_id", "updated_at", "total_price", "product_id", "quantity", "created_at") VALUES(1, '2008-09-04 03:29:58', 27.75, 3, 1, '2008-09-04 03:29:58')[0m
+Redirected to http://localhost:3000/store
+Completed in 0.45300 (2 reqs/sec) | DB: 0.03100 (6%) | 302 Found [http://localhost/store/save_order]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:29:59) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.000000)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2008-09-03 20:31:03) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"add_to_cart", "id"=>"1", "controller"=>"store"}
+  [4;35;1mProduct Load (0.000000)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.01600)
+Rendered store/_cart (0.01600)
+Completed in 0.03200 (31 reqs/sec) | Rendering: 0.01600 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/1]
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2008-09-03 20:31:05) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"checkout", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.01600 (100%) | 200 OK [http://localhost/store/checkout]
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2008-09-03 20:31:08) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Place Order", "order"=>{"name"=>"", "pay_type"=>"", "address"=>"", "email"=>""}, "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"save_order", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.09400 (10 reqs/sec) | Rendering: 0.03100 (32%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/save_order]
+
+
+Processing StoreController#save_order (for 127.0.0.1 at 2008-09-03 20:35:56) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Place Order", "order"=>{"name"=>"", "pay_type"=>"", "address"=>"", "email"=>""}, "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"save_order", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.01600 (51%) | 200 OK [http://localhost/store/save_order]
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2008-09-03 20:35:58) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"empty_cart", "controller"=>"store"}
+Redirected to http://localhost:3000/store
+Completed in 0.00010 (10000 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/store/empty_cart]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:35:59) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.000000)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.00000)
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.00000 (0%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2008-09-03 20:36:02) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"add_to_cart", "id"=>"1", "controller"=>"store"}
+  [4;35;1mProduct Load (0.000000)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/1]
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2008-09-03 20:36:04) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"empty_cart", "controller"=>"store"}
+Redirected to http://localhost:3000/store
+Completed in 0.10900 (9 reqs/sec) | DB: 0.01500 (13%) | 302 Found [http://localhost/store/empty_cart]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:36:04) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.000000)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.00000)
+Completed in 0.03100 (32 reqs/sec) | Rendering: 0.01500 (48%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store]
+
+
+Processing StoreController#add_to_cart (for 127.0.0.1 at 2008-09-03 20:36:06) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"commit"=>"Add to Cart", "authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"add_to_cart", "id"=>"1", "controller"=>"store"}
+  [4;35;1mProduct Load (0.000000)[0m   [0mSELECT * FROM "products" WHERE ("products"."id" = 1) [0m
+Rendering store/add_to_cart
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.03200 (31 reqs/sec) | Rendering: 0.01600 (50%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/add_to_cart/1]
+
+
+Processing StoreController#checkout (for 127.0.0.1 at 2008-09-03 20:36:08) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"checkout", "controller"=>"store"}
+Rendering template within layouts/store
+Rendering store/checkout
+Rendered store/_cart_item (0.00000)
+Rendered store/_cart (0.00000)
+Completed in 0.01600 (62 reqs/sec) | Rendering: 0.01600 (100%) | DB: 0.00000 (0%) | 200 OK [http://localhost/store/checkout]
+
+
+Processing StoreController#empty_cart (for 127.0.0.1 at 2008-09-03 20:36:12) [POST]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"authenticity_token"=>"0eb376baecf02b688dd2d4c673c6471f0812b4bd", "action"=>"empty_cart", "controller"=>"store"}
+Redirected to http://localhost:3000/store
+Completed in 0.01600 (62 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/store/empty_cart]
+
+
+Processing StoreController#index (for 127.0.0.1 at 2008-09-03 20:36:12) [GET]
+  Session ID: 020ef8b3b920066ea6cefeb6f4f01514
+  Parameters: {"action"=>"index", "controller"=>"store"}
+  [4;36;1mProduct Load (0.015000)[0m   [0;1mSELECT * FROM "products" ORDER BY title[0m
+Rendering template within layouts/store
+Rendering store/index
+Rendered store/_cart (0.00000)
+Completed in 0.17200 (5 reqs/sec) | Rendering: 0.07800 (45%) | DB: 0.01500 (8%) | 200 OK [http://localhost/store]
