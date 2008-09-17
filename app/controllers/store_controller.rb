@@ -7,7 +7,7 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
 #---
 class StoreController < ApplicationController
-  
+  before_filter :find_cart, :except => :empty_cart
   def index
     @products = Product.find_products_for_sale
     @cart = find_cart
@@ -73,8 +73,12 @@ class StoreController < ApplicationController
   
   
   def find_cart
-    session[:cart] ||= Cart.new
-  end
+@cart = (session[:cart] ||= Cart.new)
+end
   
+  protected
+def authorize
+end
+
   
 end

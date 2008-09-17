@@ -7,6 +7,8 @@
 # Visit http://www.pragmaticprogrammer.com/titles/rails3 for more book information.
 #---
 ActionController::Routing::Routes.draw do |map|
+  map.resources :users
+
   map.resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.
